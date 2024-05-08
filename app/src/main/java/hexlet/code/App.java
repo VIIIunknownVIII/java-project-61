@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+
 import java.util.Scanner;
 
 
@@ -11,15 +14,21 @@ import java.util.Scanner;
         System.out.println("Please enter the game number and press Enter.\n" +
                 "1 - Greet\n" +
                 "2 - Even\n" +
-                "0 - Exit");
+                "3 - Calc\n" +
+                "0 - Exit\n");
         System.out.println("Your choice: ");
         int numberGame = game.nextInt();
         switch (numberGame) {
             case 1:
                 Cli.hello();
                 break;
+            case 2:
+                Even.start();
+            case 3:
+                Calc.run();
             case 0:
                 break;
+
         }
     }
 }

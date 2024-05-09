@@ -6,7 +6,8 @@
 
 
 ## Как работает
-[![asciicast](https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6)
+![asciicast](https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6.svg)(https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6)
+
 ## Java Brain Games:
 
 

@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int ROUNDS = 3;
-    public static void runGame(String inviteText, String[][] quizzes) {
+    public static void runGame(String text, String[][] qui) {
         Scanner scan = new Scanner(System.in);
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String userName = scan.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println(inviteText);
+        System.out.println(text);
 
-        for (String[] quiz : quizzes) {
+        for (String[] quiz : qui) {
             String question = quiz[0];
             String correctAnswer = quiz[1];
 
@@ -24,8 +24,7 @@ public class Engine {
             if (userAnswer.equalsIgnoreCase(correctAnswer)) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + userAnswer
-                        + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }

@@ -3,7 +3,7 @@
 <a href="https://codeclimate.com/github/VIIIunknownVIII/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/1a1e54aa36a24f9272ae/maintainability" /></a>
 
 ## Java Brain Games:
-[][]https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6
+[](https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6)
 
 Игра: "Проверка на чётность"
 Необходимо реализовать игру "Проверка на чётность". Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное:

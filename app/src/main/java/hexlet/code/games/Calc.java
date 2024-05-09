@@ -1,41 +1,38 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import hexlet.code.Utils;
 
-
 public class Calc {
-    private static final int    SYMBOL_LIMIT_LOWER = 0;
-    private static final char[] SYMBOL             = {'+', '-', '*'};
-
-
-
     public static void run() {
-        var questions = new String[Engine.ROUNDS_COUNT][];
+        final int maxRand = 99;
+        final char[] operators = new char[]{'+', '-', '*'};
+        String[][] quizzes = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questions[i] = generateRound();
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            char operator = operators[Utils.generateNumber(0, operators.length - 1)];
+            int firstNum = Utils.generateNumber(0, maxRand);
+            int secondNum = Utils.generateNumber(0, maxRand);
+            int result = calcNumbersByOperator(firstNum, secondNum, operator);
+
+            quizzes[i][0] = firstNum + " " + operator + " " + secondNum;
+            quizzes[i][1] = String.valueOf(result);
         }
-        Engine.start(questions, "What is the result of the expression?");
+
+        String inviteText = "What is the result of the expression?";
+        Engine.runGame(inviteText, quizzes);
     }
 
-    private static String[] generateRound() {
-        var number1       = Utils.generateRandomNumber();
-        var number2       = Utils.generateRandomNumber();
-        var numberSymbol  = Utils.generateRandomNumber(SYMBOL_LIMIT_LOWER, SYMBOL.length);
-        var answer        = number1 + " " + SYMBOL[numberSymbol] + " " + number2;
-        var correctAnswer = calculateExpression(number1, number2, numberSymbol);
-
-        return new String[]{answer, String.valueOf(correctAnswer)};
-    }
-
-    private static int calculateExpression(int number1, int number2, int numberSymbol) {
-        return switch (SYMBOL[numberSymbol]) {
-            case '+' -> number1 + number2;
-            case '-' -> number1 - number2;
-            case '*' -> number1 * number2;
-            default -> throw new RuntimeException("Unknown operation");
-        };
+    private static int calcNumbersByOperator(int firstNum, int secondNum, char operator) {
+        switch (operator) {
+            case '+':
+                return firstNum + secondNum;
+            case '-':
+                return firstNum - secondNum;
+            case '*':
+                return firstNum * secondNum;
+            default:
+                throw new RuntimeException("Unknown operator: " + operator);
+        }
     }
 }

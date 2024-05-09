@@ -8,7 +8,7 @@ class Cli {
         Scanner scanner = new Scanner(System.in);
         System.out.print("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        String user = scanner.next();
+        System.out.println("Hello, " + user + "!");
     }
 }

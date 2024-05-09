@@ -1,45 +1,41 @@
 package hexlet.code.games;
+
 import hexlet.code.Engine;
 import hexlet.code.Utils;
+
 public class Progression {
-    private static final int PROGRESSION_LIMIT_UPPER  = 10;
-    private static final int HOW_MANY_LIMIT_LOWER     = 5;
-    private static final int HOW_MANY_LIMIT_UPPER     = 11;
-    private static final int SKIP_LIMIT_LOWER         = 0;
-
-
     public static void run() {
-        var questions = new String[Engine.ROUNDS_COUNT][];
+        final int maxRand = 99;
+        final int minProgressionLen = 5;
+        final int maxProgressionLen = 10;
+        final int minStepVal = 2;
+        final int maxStepVal = 9;
+        String[][] quizzes = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questions[i] = generateRound();
-        }
-        Engine.start(questions, "What number is missing in the progression?");
-    }
-    private static String[] generateRound() {
-        var number                 = Utils.generateRandomNumber();
-        var progression            = Utils.generateRandomNumber(PROGRESSION_LIMIT_UPPER);
-        var howManyNumbers         = Utils.generateRandomNumber(HOW_MANY_LIMIT_LOWER, HOW_MANY_LIMIT_UPPER);
-        var numberSkip             = Utils.generateRandomNumber(SKIP_LIMIT_LOWER, howManyNumbers);
-        String[] numberProgression = generateProgression(number, progression, howManyNumbers);
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            int len = Utils.generateNumber(minProgressionLen, maxProgressionLen);
+            int initNum = Utils.generateNumber(0, maxRand);
+            int step = Utils.generateNumber(minStepVal, maxStepVal);
+            int questNumIndex = Utils.generateNumber(0, len - 1);
 
-        var correctAnswer             = numberProgression[numberSkip];
-        numberProgression[numberSkip] = "..";
-        var answer                    = String.join(" ", numberProgression);
-
-        return new String[]{answer, correctAnswer};
-    }
-
-    private static String[] generateProgression(int number, int progression, int howManyNumbers) {
-        String[] numberProgression = new String[howManyNumbers];
-        var      nextNumber = number;
-        numberProgression[0] = String.valueOf(number);
-
-        for (int i = 1; i < howManyNumbers; i++) {
-            nextNumber += progression;
-            numberProgression[i] = String.valueOf(nextNumber);
+            String[] progression = getProgressionStringArr(len, initNum, step);
+            String answer = progression[questNumIndex];
+            progression[questNumIndex] = "..";
+            quizzes[i][0] = String.join(" ", progression);
+            quizzes[i][1] = answer;
         }
 
-        return numberProgression;
+        String inviteText = "What number is missing in the progression?";
+        Engine.runGame(inviteText, quizzes);
+    }
+
+    private static String[] getProgressionStringArr(int len, int initNum, int step) {
+        String[] progression = new String[len];
+
+        for (var i = 0; i < len; i++) {
+            progression[i] = String.valueOf(initNum + i * step);
+        }
+
+        return progression;
     }
 }

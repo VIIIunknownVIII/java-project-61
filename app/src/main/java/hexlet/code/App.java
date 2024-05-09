@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -19,13 +23,13 @@ import java.util.Scanner;
                 "6 - Prime\n" +
                 "0 - Exit\n");
         System.out.println("Your choice: ");
-        int numberGame = game.nextInt();
-        switch (numberGame) {
+        int number_game = game.nextInt();
+        switch (number_game) {
             case 1:
                 Cli.hello();
                 break;
             case 2:
-                Even.start();
+                Even.run();
             case 3:
                 Calc.run();
             case 4:
@@ -35,8 +39,9 @@ import java.util.Scanner;
             case 6:
                 Prime.run();
             case 0:
-                break;
-
+                return;
+            default:
+                throw new RuntimeException("\nUnknown");
         }
     }
 }

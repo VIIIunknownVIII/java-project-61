@@ -1,38 +1,34 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import hexlet.code.Utils;
-
 
 public class Prime {
     public static void run() {
-        var questions = new String[Engine.ROUNDS_COUNT][];
+        final int maxRand = 99;
+        String[][] quizzes = new String[Engine.ROUNDS][2];
 
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questions[i] = generateRound();
-        }
-        Engine.start(questions, "Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-    }
+        for (var i = 0; i < Engine.ROUNDS; i++) {
+            int num = Utils.generateNumber(0, maxRand);
 
-    private static String[] generateRound() {
-        var number        = Utils.generateRandomNumber();
-        var correctAnswer = isPrime(number) ? "yes" : "no";
-
-        return new String[]{String.valueOf(number), correctAnswer};
-    }
-
-    private static boolean isPrime(int number) {
-        if (number < 2) {
-            return false;
+            quizzes[i][0] = String.valueOf(num);
+            quizzes[i][1] = isPrime(num) ? "yes" : "no";
         }
 
-        for (int i = 2; i <= number / 2; i++) {
-            if (number % i == 0) {
-                return false;
+        String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.runGame(inviteText, quizzes);
+    }
+
+    public static boolean isPrime(int num) {
+        boolean isPrime = num >= 2;
+
+        for (var n = 2; n <= num / 2; n++) {
+            if (num % n == 0) {
+                isPrime = false;
+                break;
             }
         }
 
-        return true;
+        return isPrime;
     }
 }

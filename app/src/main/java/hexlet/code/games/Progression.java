@@ -6,14 +6,14 @@ import hexlet.code.Utils;
 public class Progression {
     public static void run() {
         final int maxRand = 999;
-        final int minProgressionLen = 5;
-        final int maxProgressionLen = 10;
+        final int minProgress = 5;
+        final int maxProgress = 10;
         final int minStepVal = 2;
         final int maxStepVal = 9;
         String[][] quizzes = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int len = Utils.generate(minProgressionLen, maxProgressionLen);
+            int len = Utils.generate(minProgress, maxProgress);
             int initNum = Utils.generate(0, maxRand);
             int step = Utils.generate(minStepVal, maxStepVal);
             int questNumIndex = Utils.generate(0, len - 1);

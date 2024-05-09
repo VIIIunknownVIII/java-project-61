@@ -6,29 +6,29 @@ import hexlet.code.Utils;
 public class Prime {
     public static void run() {
         final int maxRand = 999;
-        String[][] quizzes = new String[Engine.ROUNDS][2];
+        String[][] quiz = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
             int num = Utils.generate(0, maxRand);
 
-            quizzes[i][0] = String.valueOf(num);
-            quizzes[i][1] = isPrime(num) ? "yes" : "no";
+            quiz[i][0] = String.valueOf(num);
+            quiz[i][1] = Prime1(num) ? "yes" : "no";
         }
 
         String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.runGame(inviteText, quizzes);
+        Engine.runGame(inviteText, quiz);
     }
 
-    public static boolean isPrime(int num) {
-        boolean isPrime = num >= 2;
+    public static boolean Prime1(int num) {
+        boolean Prime1 = num >= 2;
 
         for (var n = 2; n <= num / 2; n++) {
             if (num % n == 0) {
-                isPrime = false;
+                Prime1 = false;
                 break;
             }
         }
 
-        return isPrime;
+        return Prime1;
     }
 }

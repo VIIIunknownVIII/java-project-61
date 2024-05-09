@@ -5,19 +5,19 @@ import hexlet.code.Utils;
 
 public class GCD {
     public static void run() {
-        final int maxRand = 99;
-        String[][] quizzes = new String[Engine.ROUNDS][2];
+        final int maxRand = 999;
+        String[][] quizz = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int firstNum = Utils.generateNumber(0, maxRand);
-            int secondNum = Utils.generateNumber(1, maxRand);
+            int firstNum = Utils.generate(0, maxRand);
+            int secondNum = Utils.generate(1, maxRand);
             int gcd = gcd(firstNum, secondNum);
-            quizzes[i][0] = firstNum + " " + secondNum;
-            quizzes[i][1] = String.valueOf(gcd);
+            quizz[i][0] = firstNum + " " + secondNum;
+            quizz[i][1] = String.valueOf(gcd);
         }
 
         String inviteText = "Find the greatest common divisor of given numbers.";
-        Engine.runGame(inviteText, quizzes);
+        Engine.runGame(inviteText, quizz);
     }
 
     private static int gcd(int a, int b) {

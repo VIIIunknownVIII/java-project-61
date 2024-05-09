@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
     public static void run() {
-        final int maxRand = 99;
+        final int maxRand = 999;
         final int minProgressionLen = 5;
         final int maxProgressionLen = 10;
         final int minStepVal = 2;
@@ -13,10 +13,10 @@ public class Progression {
         String[][] quizzes = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
-            int len = Utils.generateNumber(minProgressionLen, maxProgressionLen);
-            int initNum = Utils.generateNumber(0, maxRand);
-            int step = Utils.generateNumber(minStepVal, maxStepVal);
-            int questNumIndex = Utils.generateNumber(0, len - 1);
+            int len = Utils.generate(minProgressionLen, maxProgressionLen);
+            int initNum = Utils.generate(0, maxRand);
+            int step = Utils.generate(minStepVal, maxStepVal);
+            int questNumIndex = Utils.generate(0, len - 1);
 
             String[] progression = getProgressionStringArr(len, initNum, step);
             String answer = progression[questNumIndex];

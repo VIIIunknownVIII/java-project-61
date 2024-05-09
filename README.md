@@ -5,7 +5,8 @@
 <a href="https://codeclimate.com/github/VIIIunknownVIII/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/1a1e54aa36a24f9272ae/maintainability" /></a>
 
 
-## [Как работает](https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6)
+## Как работает
+[![asciicast](https://asciinema.org/a/hDIm3XjlNYZFtl8F74EkHGmd6)
 ## Java Brain Games:
 
 

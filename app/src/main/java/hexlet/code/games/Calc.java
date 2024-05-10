@@ -20,7 +20,7 @@ public class Calc {
         }
 
         String inviteText = "What is the result of the expression?";
-        Engine.runGame(inviteText, quizzes);
+        Engine.run(inviteText, quizzes);
     }
 
     private static int calcNumbersByznak(int firstNum, int secondNum, char znak) {

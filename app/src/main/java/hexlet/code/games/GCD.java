@@ -17,7 +17,7 @@ public class GCD {
         }
 
         String inviteText = "Find the greatest common divisor of given numbers.";
-        Engine.runGame(inviteText, quizz);
+        Engine.run(inviteText, quizz);
     }
 
     private static int gcd(int a, int b) {

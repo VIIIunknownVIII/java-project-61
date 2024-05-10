@@ -15,6 +15,6 @@ public class Even {
         }
 
         String inviteText = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.runGame(inviteText, quizzes);
+        Engine.run(inviteText, quizzes);
     }
 }

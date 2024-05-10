@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int ROUNDS = 3;
-    public static void runGame(String text, String[][] qui) {
+    public static void run(String text, String[][] qui) {
         Scanner scan = new Scanner(System.in);
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");

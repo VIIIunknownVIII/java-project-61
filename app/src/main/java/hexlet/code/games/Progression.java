@@ -26,7 +26,7 @@ public class Progression {
         }
 
         String inviteText = "What number is missing in the progression?";
-        Engine.runGame(inviteText, quizzes);
+        Engine.run(inviteText, quizzes);
     }
 
     private static String[] getProgressionStringArr(int len, int initNum, int step) {

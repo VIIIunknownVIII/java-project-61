@@ -16,7 +16,7 @@ public class Prime {
         }
 
         String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.runGame(inviteText, quiz);
+        Engine.run(inviteText, quiz);
     }
 
     public static boolean Prime1(int num) {

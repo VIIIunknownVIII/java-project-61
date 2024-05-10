@@ -1,52 +1,59 @@
 package hexlet.code;
 
-import hexlet.code.games.Even;
-import hexlet.code.games.Calc;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
-
 import java.util.Scanner;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
- class App {
+
+public class App {
+    public static final int GREAT = 1;
+    public static final int EVEN = 2;
+    public static final int CALC = 3;
+    public static final int GCD = 4;
+    public static final int PROGRESSION = 5;
+    public static final int PRIME = 6;
+    public static final int EXIT = 0;
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the game number and press Enter");
-        System.out.println("1 - Greet");
-        System.out.println("2 - Even");
-        System.out.println("3 - Calc");
-        System.out.println("4 - GCD");
-        System.out.println("5 - Progression");
-        System.out.println("6 - Prime");
-        System.out.println("0 - Exit");
-        System.out.println("Your choice: ");
-        int number = scan.nextInt();
-        switch (number) {
-            case 1:
+        System.out.println("Please enter the game number and press Enter.");
+        System.out.print("""
+        1 - Great
+        2 - Even
+        3 - Calc
+        4 - GCD
+        5 - Progression
+        6 - Prime
+        0 - Exit""");
+        Scanner scanner = new Scanner(System.in);
+        int userChoice = scanner.nextInt();
+        System.out.println("Your choice " + userChoice);
+
+        switch (userChoice) {
+            case GREAT:
                 Cli.hello();
                 break;
-            case 2:
+            case EVEN:
                 Even.run();
                 break;
-            case 3:
+            case CALC:
                 Calc.run();
                 break;
-            case 4:
-                GCD.run();
+            case GCD:
+                Gcd.run();
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.run();
                 break;
-            case 6:
+            case PRIME:
                 Prime.run();
                 break;
-            case 0:
+            case EXIT:
                 break;
-            default: throw new RuntimeException("Unknown");
-
+            default: System.out.println("Unknown command: " + userChoice + ". Bye!");
         }
+        scanner.close();
     }
 }

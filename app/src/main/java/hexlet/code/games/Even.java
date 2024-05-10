@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Even {
     public static void run() {
-        final int maxRand = 999;
+        final int maxRand = 99;
         String[][] quizzes = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {

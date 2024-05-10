@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Calc {
     public static void run() {
-        final int maxRand = 999;
+        final int maxRand = 99;
         final char[] operators = new char[]{'+', '-', '*','/'};
         String[][] quizzes = new String[Engine.ROUNDS][2];
 

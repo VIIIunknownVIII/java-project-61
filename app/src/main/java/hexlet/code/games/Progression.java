@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Progression {
     public static void run() {
-        final int maxRand = 999;
+        final int maxRand = 99;
         final int minProgress = 5;
         final int maxProgress = 10;
         final int minStepVal = 2;

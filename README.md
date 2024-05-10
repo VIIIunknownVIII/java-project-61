@@ -26,6 +26,10 @@
 Игроку необходимо решить и узнать - это число простое или нет.
 
 
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/VIIIunknownVIII/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/VIIIunknownVIII/java-project-61/actions)
+
+
 
 
 

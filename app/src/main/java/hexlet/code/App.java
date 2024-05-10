@@ -13,7 +13,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
  class App {
     public static void main(String[] args) {
-        Scanner game = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.\n" +
                 "1 - Greet\n" +
                 "2 - Even\n" +
@@ -23,7 +23,7 @@ import java.util.Scanner;
                 "6 - Prime\n" +
                 "0 - Exit\n");
         System.out.println("Your choice: ");
-        int number_game = game.nextInt();
+        int number_game = scan.nextInt();
         switch (number_game) {
             case 1:
                 Cli.hello();

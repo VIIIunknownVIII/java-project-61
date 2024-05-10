@@ -24,17 +24,12 @@ public class Calc {
     }
 
     private static int calcNumbersByznak(int firstNum, int secondNum, char znak) {
-        switch (znak) {
-            case '+':
-                return firstNum + secondNum;
-            case '-':
-                return firstNum - secondNum;
-            case '*':
-                return firstNum * secondNum;
-            case '/':
-                return firstNum / secondNum;
-            default:
-                throw new RuntimeException("Unknown operator: " + znak);
-        }
+        return switch (znak) {
+            case '+' -> firstNum + secondNum;
+            case '-' -> firstNum - secondNum;
+            case '*' -> firstNum * secondNum;
+            case '/' -> firstNum / secondNum;
+            default -> throw new RuntimeException("Unknown operator: " + znak);
+        };
     }
 }

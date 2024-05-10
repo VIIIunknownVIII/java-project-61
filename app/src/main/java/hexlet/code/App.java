@@ -18,8 +18,8 @@ import java.util.Scanner;
                 + "1 - Greet\n" + "2 - Even\n" + "3 - Calc\n" + "4 - GCD\n"
                 + "5 - Progression\n" + "6 - Prime\n" + "0 - Exit\n");
         System.out.println("Your choice: ");
-        int number_game = scan.nextInt();
-        switch (number_game) {
+        int number = scan.nextInt();
+        switch (number) {
             case 1:
                 Cli.hello();
                 break;

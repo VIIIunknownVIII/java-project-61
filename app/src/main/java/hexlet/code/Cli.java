@@ -1,6 +1,5 @@
 package hexlet.code;
 import java.util.Scanner;
-
 class Cli {
     public static void hello() {
         Scanner scanner = new Scanner(System.in);
@@ -8,6 +7,5 @@ class Cli {
         System.out.print("May I have your name? ");
         String user = scanner.next();
         System.out.println("Hello, " + user + "!");
-
     }
 }

@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class Gcd {
+public class Gcd{
     public static void run() {
         final int maxRand = 101;
         String[][] quizz = new String[Engine.ROUNDS][2];

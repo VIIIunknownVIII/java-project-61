@@ -30,14 +30,19 @@ import java.util.Scanner;
                 break;
             case 2:
                 Even.run();
+                break;
             case 3:
                 Calc.run();
+                break;
             case 4:
                 GCD.run();
+                break;
             case 5:
                 Progression.run();
+                break;
             case 6:
                 Prime.run();
+                break;
             case 0:
                 break;
             default: throw new RuntimeException("Unknown");

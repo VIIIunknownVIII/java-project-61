@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class GCD {
     public static void run() {
-        final int maxRand = 99;
+        final int maxRand = 101;
         String[][] quizz = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {

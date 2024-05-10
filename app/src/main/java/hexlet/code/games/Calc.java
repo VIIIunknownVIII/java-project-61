@@ -6,8 +6,10 @@ import hexlet.code.Utils;
 public class Calc {
     public static void run() {
         final int maxRand = 101;
-        final char[] operators = new char[]{'+', '-', '*','/'};
-        String[][] quizzes = new String[Engine.ROUNDS][2];
+        final char[] operators = new char[]{'+', '-', '*'};
+
+
+        String[][] quizzes = new String[Engine.ROUNDS][];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
             char znak = operators[Utils.generate(0, operators.length - 1)];
@@ -28,7 +30,6 @@ public class Calc {
             case '+' -> firstNum + secondNum;
             case '-' -> firstNum - secondNum;
             case '*' -> firstNum * secondNum;
-            case '/' -> firstNum / secondNum;
             default -> throw new RuntimeException("Unknown operator: " + znak);
         };
     }

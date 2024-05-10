@@ -7,9 +7,7 @@ public class Calc {
     public static void run() {
         final int maxRand = 101;
         final char[] operators = new char[]{'+', '-', '*'};
-
-
-        String[][] quizzes = new String[Engine.ROUNDS][];
+        String[][] quizzes = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
             char znak = operators[Utils.generate(0, operators.length - 1)];

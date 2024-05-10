@@ -12,7 +12,7 @@ repositories {
 }
 
 application {
-    mainClass = 'hexlet.code.app'
+    mainClass = 'hexlet.code.App'
 }
 
 dependencies {

@@ -39,9 +39,8 @@ import java.util.Scanner;
             case 6:
                 Prime.run();
             case 0:
-                return;
-            default:
-                throw new RuntimeException("\nUnknown");
+                break;
+            default: throw new RuntimeException("Unknown");
         }
     }
 }

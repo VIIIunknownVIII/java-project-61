@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class gcd {
+public class GCD {
     public static void run() {
         final var description = "Find the greatest common divisor of given numbers.";
         String[][] roundsData = new String[Engine.ROUNDS][2];

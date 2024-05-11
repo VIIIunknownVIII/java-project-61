@@ -12,14 +12,14 @@ public class Prime {
             int num = Utils.generate(0, maxRand);
 
             quiz[i][0] = String.valueOf(num);
-            quiz[i][1] = Prime1(num) ? "yes" : "no";
+            quiz[i][1] = Prime(num) ? "yes" : "no";
         }
 
         String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Engine.run(inviteText, quiz);
     }
 
-    public static boolean Prime1(int num) {
+    public static boolean Prime(int num) {
         boolean Prime1 = num >= 2;
 
         for (var n = 2; n <= num / 2; n++) {

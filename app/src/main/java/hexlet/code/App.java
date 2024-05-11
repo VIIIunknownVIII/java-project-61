@@ -3,7 +3,6 @@ package hexlet.code;
 import java.util.Scanner;
 
 import hexlet.code.games.*;
-import hexlet.code.games.gcd;
 
 
 public class App {
@@ -39,7 +38,7 @@ public class App {
                 Calc.run();
                 break;
             case GCD:
-                gcd.run();
+                hexlet.code.games.GCD.run();
                 break;
             case PROGRESSION:
                 Progression.run();

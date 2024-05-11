@@ -3,8 +3,8 @@ package hexlet.code;
 import java.util.Random;
 
 public class Utils {
-    public static int generate(int Strt, int Ed) {
+    public static int generate(int start, int end) {
         Random random = new Random();
-        return Strt + random.nextInt(Ed - Strt + 1);
+        return start + random.nextInt(end - start + 1);
     }
 }

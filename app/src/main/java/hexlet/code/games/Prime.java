@@ -12,23 +12,23 @@ public class Prime {
             int num = Utils.generate(0, maxRand);
 
             quiz[i][0] = String.valueOf(num);
-            quiz[i][1] =  Primes(num) ? "yes" : "no";
+            quiz[i][1] =  isPrimes(num) ? "yes" : "no";
         }
 
         String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         Engine.run(inviteText, quiz);
     }
 
-    public static boolean Primes(int num) {
-        boolean Primes = num >= 2;
+    public static boolean isPrimes(int num) {
+        boolean isPrimes = num >= 2;
 
         for (var n = 2; n <= num / 2; n++) {
             if (num % n == 0) {
-                Primes = false;
+                isPrimes = false;
                 break;
             }
         }
 
-        return Primes;
+        return isPrimes;
     }
 }

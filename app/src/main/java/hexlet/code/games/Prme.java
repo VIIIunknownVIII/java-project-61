@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-public class Prime {
+public class Prme {
     public static void run() {
         final int maxRand = 999;
         String[][] quiz = new String[Engine.ROUNDS][2];

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import hexlet.code.games.Calc;
 import hexlet.code.games.Even;
-import hexlet.code.games.Prime;
+import hexlet.code.games.Prme;
 import hexlet.code.games.Progression;
 
 
@@ -47,7 +47,7 @@ public class App {
                 Progression.run();
                 break;
             case PRIME:
-                Prime.run();
+                Prme.run();
                 break;
             case EXIT:
                 break;

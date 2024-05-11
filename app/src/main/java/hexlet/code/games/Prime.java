@@ -12,7 +12,7 @@ public class Prime {
             int num = Utils.generate(0, maxRand);
 
             quiz[i][0] = String.valueOf(num);
-            quiz[i][1] = Prime(num) ? "yes" : "no";
+            quiz[i][1] =  Primes(num) ? "yes" : "no";
         }
 
         String inviteText = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

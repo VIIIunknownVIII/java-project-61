@@ -30,7 +30,7 @@ public class App {
 
         switch (userChoice) {
             case GREAT:
-                Cli.hello();
+                Cli.greet();
                 break;
             case EVEN:
                 Even.run();

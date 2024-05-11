@@ -9,13 +9,12 @@ public class gcd {
         String[][] roundsData = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < Engine.ROUNDS; i += 1) {
-            roundsData[i] = generateRoundData();
+            roundsData[i] = generate();
         }
 
         Engine.run(description, roundsData);
     }
-
-    private static String[] generateRoundData() {
+    private static String[] generate() {
         final int maxRandomNumber = 50;
         final int minRandomNumber = 2;
         int firstRandomNumber = Utils.generate(minRandomNumber, maxRandomNumber);

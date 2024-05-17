@@ -22,7 +22,7 @@ public class Prime {
     public static boolean isPrimes(int num) {
         boolean isPrimes = num >= 2;
 
-        for (var n = 2; n <= num / 2; n++) {
+        for (var n = 2; n <= Math.sqrt(num); n++) {
             if (num % n == 0) {
                 isPrimes = false;
                 break;

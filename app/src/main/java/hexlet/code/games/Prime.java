@@ -20,15 +20,17 @@ public class Prime {
     }
 
     public static boolean isPrimes(int num) {
-        boolean isPrimes = num >= 2;
+        if (num < 2) {
+            return false;
+        }
+        boolean isPrimes = true;
 
-        for (var n = 2; n <= Math.sqrt(num); n++) {
+        for (int n = 2; n <= Math.sqrt(num); n++) {
             if (num % n == 0) {
                 isPrimes = false;
                 break;
             }
         }
-
         return isPrimes;
     }
 }

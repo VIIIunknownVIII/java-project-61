@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Prime {
     public static void run() {
-        final int maxRand = 999;
+        final int maxRand = 20;
         String[][] quiz = new String[Engine.ROUNDS][2];
 
         for (var i = 0; i < Engine.ROUNDS; i++) {
